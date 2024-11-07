@@ -20,13 +20,3 @@ private:
     bool dir_rotate;
 
 };
-
-Test::Test()
-: en(PA_0, PA_1, 2048, false)
-, pid(0.5, 0, 0, 1 * 1000)
-, dir(PA_2)
-, speed(PA_3)
-, dir_rotate(0)
-{
-    speed.period_us(100);
-}

@@ -1,7 +1,7 @@
 #include "UartLink.hpp"
 #include "Undercarriage_Test.hpp"
 
-UartLink uart1(USBTX, USBRX, 115200);
+UartLink uart1(PC_11, PC_10, 115200);
 Test undercarriage;
 UartLinkSubscriber<float> sub(uart1, 1);
 
