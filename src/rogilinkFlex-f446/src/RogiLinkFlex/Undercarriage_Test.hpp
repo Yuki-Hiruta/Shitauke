@@ -5,7 +5,7 @@
 class Test
 {
 public:
-    Test();
+    Test(PinName interrupt_in_pin, PinName digital_in_pin, PinName dir_pin, PinName pwm_pin);
     void setDeg(float deg_);
     void motor_ctr();
 

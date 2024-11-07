@@ -2,11 +2,11 @@
 #include "Undercarriage_Test.hpp"
 
 
-Test::Test()
-: en(PA_0, PA_1, 2048, false)
+Test::Test(PinName interrupt_in_pin, PinName digital_in_pin, PinName dir_pin, PinName pwm_pin)
+: en(interrupt_in_pin, digital_in_pin, 2048, false)
 , pid(0.5, 0, 0, 1 * 1000)
-, dir(PA_2)
-, speed(PA_3)
+, dir(dir_pin)
+, speed(pwm_pin)
 , dir_rotate(0)
 {
     speed.period_us(100);
