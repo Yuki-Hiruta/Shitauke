@@ -4,7 +4,7 @@
 
 Test::Test(PinName interrupt_in_pin, PinName digital_in_pin, PinName dir_pin, PinName pwm_pin)
 : en(interrupt_in_pin, digital_in_pin, 2048, false)
-, pid(0.5, 0, 0, 1 * 1000)
+, pid(0.1, 0, 0, 1 * 1000)
 , dir(dir_pin)
 , speed(pwm_pin)
 , dir_rotate(0)
